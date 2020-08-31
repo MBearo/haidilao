@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs')
-const ws = fs.createWriteStream('a.txt')
+const ws = fs.createWriteStream('a.txt',{'flags': 'a'})
 async function go() {
   const browser = await puppeteer.launch()
   for (let i = 0; i < 100; i++) {
